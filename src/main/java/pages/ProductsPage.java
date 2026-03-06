@@ -11,11 +11,14 @@ public class ProductsPage {
         this.driver = driver;
     }
 
-    By firstProduct = By.xpath("(//button[text()='Add to cart'])[1]");
+    By firstProduct = By.id("add-to-cart-sauce-labs-backpack");
     By cartIcon = By.className("shopping_cart_link");
 
-    public void addProduct() {
+    public void addProductToCart() {
         driver.findElement(firstProduct).click();
+    }
+
+    public void openCart() {
         driver.findElement(cartIcon).click();
     }
 }
